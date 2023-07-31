@@ -1,0 +1,148 @@
+.hero {
+  display: flex;
+  padding-top: 203px;
+  padding-bottom: 202px;
+  transition: all .3s;
+  vertical-align: middle;
+
+  background-image: url(../img/hero-bg.webp);
+  background-size: cover;
+  background-position: center center;
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 100%;
+  }
+
+  &__content {
+    margin-right: 150px;
+  }
+
+
+  &__title {
+    margin-bottom: 92px;
+    text-transform: uppercase;
+    font: 700 48px/56px "Lato", sans-serif;
+
+  }
+
+  &__list {
+
+    margin-bottom: 80px;
+
+    span {
+      display: block;
+      padding-bottom: 10px;
+      font: 700 20px/24px "Lato", sans-serif;
+    }
+  }
+
+  &__list-item {
+    padding-left: 5px;
+    font: 400 20px/24px "Lato", sans-serif;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  &__btn {
+    min-width: 183px;
+    padding: 15px 31px;
+    border-radius: 4px;
+
+    font: 400 13px/13px "Lato", sans-serif;
+
+    text-transform: uppercase;
+  }
+
+  &__btn:first-child {
+    margin-right: 30px;
+  }
+
+
+
+}
+
+
+@media (max-width: 1000px) {
+  .hero {
+    padding-top: calc(100px + 40 * ((100vw - 320px)/ 680));
+    padding-bottom: calc(50px + 10 * ((100vw - 320px)/ 680));
+  }
+}
+
+
+
+@media (max-width: 991.98px) {
+  .hero {
+    &__content {
+      margin-right: 0;
+    }
+
+    &__title {
+      font-size: calc(20px + 24 * ((100vw - 320px)/ 680));
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  .hero {
+
+    padding-top: calc(40px + 40 * ((100vw - 320px)/ 680));
+    background-position: center right;
+
+    &__container {
+      max-width: 750px;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    &__content {
+      padding: 15px;
+      background: rgba(213, 213, 213, 0.4);
+      border-radius: 15px;
+    }
+
+    &__downarrow {
+      left: 84%;
+      bottom: 40px;
+    }
+
+    &__downarrow svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+
+    &__title {
+      margin-bottom: 25px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    &__list {
+
+      margin-bottom: 60px;
+
+      span {
+
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+
+    &__list-item {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}
